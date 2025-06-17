@@ -8,7 +8,7 @@
 <body>
     <!-- 准备好容器 -->
     <div id="test">
-        
+
     </div>
 </body>
 <!-- 引入依赖 ,引入的时候，必须就按照这个步骤-->
@@ -24,10 +24,11 @@
         ReactDOM.render(VDOM,document.getElementById("test"));
         //虚拟DOM本质就是一个对象
         console.log(VDOM,typeof VDOM);
+        //这是真实DOM
         console.log(document.getElementById("test"));
         //虚拟DOM比较的轻，真实的DOM比较的重，属性比较多
         //debugger
-        
+
 </script>
 
 </html>
