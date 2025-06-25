@@ -19,7 +19,9 @@
 <!--这里使用了js来创建虚拟DOM-->
 <script type="text/javascript">
         // 1.创建虚拟DOM[在这使用了js的语法]React.createElement(标签,标签属性,内容)
+        // jsx是React.createElement的语法糖
         const VDOM = React.createElement('h1',{id:"title"},"nihao")
+        const VDOM2=React.createElement('h1',{id:"title"},React.createElement('span',null,"nihao"))
         // 2.渲染，如果有多个渲染同一个容器，后面的会将前面的覆盖掉
         ReactDOM.render(VDOM,document.getElementById("test"));
         //虚拟DOM本质就是一个对象
