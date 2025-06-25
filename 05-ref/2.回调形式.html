@@ -24,18 +24,32 @@
 
     class Dom extends React.Component{
 
+        state = {isHot:true};
+
         btnOnClick = () =>{
-            alert(this.refs.dian.value);
+            alert(this.dian.value);
         }
         inputBlur = () =>{
-            alert(this.refs.shiqu   .value);
+            alert(this.shiqu.value);
+        }
+        btnOnClick2 = () =>{
+            this.setState({isHot:!this.state.isHot});
+        }
+        // 写成回调的绑定方式可以避免render时ref回调重复执行的问题，但是这个问题无关紧要
+        isRef = (self) =>{
+            console.log(self);
+            this.dian = self;
+            console.log("sss")
         }
         render(){
+            //回调形式的ref 在ref中执行回调函数，将自身作为参数传递给回调函数
             return (
                 <div>
-                    <input ref="dian" type="text" placeholder="点击弹出" />&nbsp;
+                {/*<input ref={self =>{ this.dian = self;console.log(self)}} type="text" placeholder="点击弹出" />&nbsp;*/}
+                <input ref={this.isRef} type="text" placeholder="点击弹出" />&nbsp;
                     <button onClick = {this.btnOnClick}>点击</button>&nbsp;
-                    <input ref="shiqu" onBlur={this.inputBlur} type="text" placeholder="失去焦点弹出弹出" />
+                    <button onClick = {this.btnOnClick2}>点击</button>&nbsp;
+                    <input ref={self => this.shiqu = self} onBlur={this.inputBlur} type="text" placeholder="失去焦点弹出弹出" />
                 </div>
             )
         }

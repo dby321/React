@@ -41,8 +41,8 @@
             console.log(this.MyRef.current.value);
             //alert(this.refs.dian.value);
         }
-        inputBlur = () =>{
-            console.log(this.MyRef1.current.value);
+        inputBlur = (e) =>{
+            console.log(e.target.value);
             //lert(this.refs.shiqu   .value);
         }
         render(){
@@ -50,7 +50,7 @@
                 <div>
                     <input ref={this.MyRef} type="text" placeholder="点击弹出" />&nbsp;
                     <button onClick = {this.btnOnClick}>点击</button>&nbsp;
-                    <input ref={this.MyRef1} onBlur={this.inputBlur} type="text" placeholder="失去焦点弹出弹出" />
+                    <input onBlur={this.inputBlur} type="text" placeholder="失去焦点弹出弹出" />
                 </div>
             )
         }
