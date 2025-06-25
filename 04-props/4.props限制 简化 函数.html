@@ -23,27 +23,19 @@
 <script type="text/babel">
 
     
-    function Person(props){
-          return (
-                <ul>
-                    <li>{props.name}</li>
-                    <li>{props.age}</li>
-                    <li>{props.sex}</li>
-                </ul>
-            )
+    function Person(props) {
+        return (
+            <ul>
+                <li>{props.name}</li>
+                <li>{props.age}</li>
+                <li>{props.sex}</li>
+            </ul>
+        )
     }
-    
-   
-    
-    //在js中可以使用{...p}来复制一个对象，但是这个地方并不是复制对象，而是babel+react通过展开运算符，展开了一个对象
-    //但是只能在标签中进行使用
-    //const p = {name:"张三",age:"18",sex:"女"}   {14}就代表的是数值
-    ReactDOM.render(<Person name="sss" age = {14} speak="8"/>,document.getElementById("div"));
-    //ReactDOM.render(<Person {...p}/>,document.getElementById("div"));
 
-    function speak(){
-        console.log("这个是一个函数")
-    }
+    ReactDOM.render(<Person name="sss" age = {14} speak="8"/>,document.getElementById("div"));
+
+
 
 </script>
 </html>

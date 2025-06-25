@@ -34,27 +34,22 @@
                 </ul>
             )
         }
+        //对组件的属性对其进行限制
+        static propTypes = {
+            name:PropTypes.string.isRequired,
+            sex:PropTypes.string,
+            speak:PropTypes.func
+        }
+        //指定默认的标签属性
+        static defaultProps = {
+            sex:"不男不女",
+            age:18
+        }   
+        
     }
-    //对组件的属性对其进行限制
-    Person.propTypes = {
-        name:PropTypes.string.isRequired,
-        sex:PropTypes.string,
-        speak:PropTypes.func
-    }
-    //指定默认的标签属性
-    Person.defaultProps = {
-        sex:"不男不女",
-        age:18
-    }
-    //在js中可以使用{...p}来复制一个对象，但是这个地方并不是复制对象，而是babel+react通过展开运算符，展开了一个对象
-    //但是只能在标签中进行使用
-    //const p = {name:"张三",age:"18",sex:"女"}   {14}就代表的是数值
-    ReactDOM.render(<Person name="sss" age = {14} speak="8"/>,document.getElementById("div"));
-    //ReactDOM.render(<Person {...p}/>,document.getElementById("div"));
 
-    function speak(){
-        console.log("这个是一个函数")
-    }
+    ReactDOM.render(<Person name="sss" age = {14} speak="8"/>,document.getElementById("div"));
+
 
 </script>
 </html>
