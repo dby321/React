@@ -30,11 +30,11 @@
 
         state = {name:"",pwd:""};
 
-       /* login = (event) =>{
+       login = (event) =>{
             event.preventDefault(); //阻止表单提交
-            console.log(this.name.value);
-            console.log(this.pwd.value);
-        }*/
+            const {username,password}=this.state
+            alert(`你输入的用户名是${username}，你输入的密码是${password}`)
+        }
 
         saveName = (event) =>{
             this.setState({name:event.target.value});

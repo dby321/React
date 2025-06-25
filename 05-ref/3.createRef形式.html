@@ -25,6 +25,13 @@
     class Dom extends React.Component{
         //通过API，创建React的容器，相当于对于回调函数创建了一个相应的API，省略了中间环节
         //但是这个容器是专门专用的，所以每一个ref都需要创建这个
+// | 用法类型        | 示例代码                                      | 是否推荐 | 支持函数组件 | 使用方式                         | 注意事项                            |
+// |-----------------|-----------------------------------------------|----------|---------------|----------------------------------|-------------------------------------|
+// | 字符串形式      | `<input ref="myInput" />`                     | ❌ 否     | ❌ 不支持      | 通过 `this.refs.myInput` 访问    | 已废弃，不推荐使用                  |
+// | 回调形式        | `<input ref={(el) => this.myInput = el} />`   | ✅ 是     | ✅ 支持        | 手动赋值给实例属性               | 更灵活，可精确控制生命周期          |
+// | createRef       | `myInput = React.createRef()` <br> `<input ref={this.myInput} />` | ✅ 是     | ❌ 不支持      | 通过 `this.myInput.current` 访问 | 类组件中推荐使用                    |
+
+
         MyRef = React.createRef();
         MyRef1 = React.createRef();
         
