@@ -7,10 +7,10 @@ import Header from './pages/header/header'
 import MyNavLink from './components/MyNavLink/myNavLink';
 
 class App extends Component{
-    
+
     render(){
         //通过 ...将状态中的全部赋值过去
-        return ( 
+        return (
             <div>
                 <div className="row">
                 <div className="col-xs-offset-2 col-xs-8">
@@ -22,7 +22,7 @@ class App extends Component{
                     <div className="list-group">
                     {/* <a className="list-group-item active" href="./about.html">About</a>
                     <a className="list-group-item" href="./home.html">Home</a> */}
-                    {/* RouteBrowserRouterr:就是利用H5推出的history身上的API
+                    {/* BrowserRouter:就是利用H5推出的history身上的API
                         HashRouter:就是利用#,也就是锚点 hash值
                     */}
 
@@ -48,9 +48,9 @@ class App extends Component{
                 </div>
                 </div>
             </div>
-            
+
         )
     }
 }
 
-export default App  
+export default App

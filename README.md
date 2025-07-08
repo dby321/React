@@ -1575,13 +1575,13 @@ match:
 
 因为Link不能够改变标签体，因此只适合用于一些写死的标签。而如果想要有一些点击的效果，使用NavLink.
 
-如下代码，就写了ctiveClassName，当点击的时候就会触发这个class的样式
+如下代码，就写了activeClassName，当点击的时候就会触发这个class的样式
 
 ```react
 {/*NavLink在点击的时候就会去找activeClassName="ss"所指定的class的值，如果不添加默认是active
  这是因为Link相当于是把标签写死了，不能去改变什么。*/}
 
-<NavLink  ctiveClassName="ss" className="list-group-item"  to="/about">About</NavLink>
+<NavLink  activeClassName="ss" className="list-group-item"  to="/about">About</NavLink>
 <NavLink className="list-group-item"  to="/home">Home</NavLink> 
 ```
 
