@@ -15,7 +15,7 @@ export default class home extends Component {
                         <MyNavLink to = "/home/news">News</MyNavLink>
                     </li>
                     <li>
-                        <MyNavLink  to = "/home/message">Message</MyNavLink>
+                        <MyNavL ink  to = "/home/message">Message</MyNavLink>
                     </li>
                     </ul>
                     <Switch>
