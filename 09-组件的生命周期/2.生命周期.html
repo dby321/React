@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-   
+
 
 </head>
 <body>
@@ -78,14 +78,13 @@
        componentWillUnmonut(){
             console.log("A --- componentWillUnmonut");
        }
-     
+
    }
    class B extends React.Component{
        render(){
-           return(   
+           return(
                 <div>
                     <h1>这个是B组件,传递过来的是：{this.props.name}</h1>
-                    
                 </div>
            )
        }
